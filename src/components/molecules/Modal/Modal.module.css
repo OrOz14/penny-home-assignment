@@ -1,0 +1,72 @@
+
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    border-radius: 1rem;
+    max-width: 35rem;
+}
+
+.title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.close {
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.description {
+    font-weight: 400;
+    padding: 0.5rem 1.5rem;
+    white-space: 'nowrap',
+}
+
+.footer {
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.footerButton {
+        display: flex;
+    }
+
+.button {
+    padding: 0 1.813rem;
+}
+
+@media screen and (max-width: 765px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+   .description {
+        padding: 1rem;
+    }
+
+    .footer {
+        padding: 1rem;
+        display: flex;
+        justify-content: stretch;
+        gap: 1rem;
+    }
+
+    .footerButton {
+        display: flex;
+        flex-grow: 1;
+    }
+}

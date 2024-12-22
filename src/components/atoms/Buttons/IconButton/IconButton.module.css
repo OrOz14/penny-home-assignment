@@ -1,0 +1,14 @@
+.button {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+}
+
+@media screen and (max-width: 765px) {
+    .button {
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
+        border: none;
+    }
+}

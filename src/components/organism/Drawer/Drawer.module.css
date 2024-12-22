@@ -1,0 +1,53 @@
+.content {
+    max-width: 44.25rem;
+}
+
+.header {
+    padding: 1.75rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    display: flex;
+}
+
+.body {
+    padding: 2rem;
+}
+
+.footer {
+    display: none;
+}
+
+.divider {
+    display: none;
+}
+
+@media screen and (max-width: 765px) {
+    .header {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .body {
+        padding: 1rem;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .divider {
+        display: flex;
+    }
+}

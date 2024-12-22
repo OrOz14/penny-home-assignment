@@ -1,0 +1,45 @@
+.main {
+    background-color: var(--primary--color);
+    font-size: 0.875rem;
+    color: var(--tertiary--text);
+    height: 2.5rem;
+    padding: 0.625rem 1rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    appearance: none;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 0 solid transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    outline: 0;
+    line-height: 1.25rem;
+    isolation: isolate;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+.light {
+    background-color: transparent;
+    color: var(--primary--text);
+    border: 1px solid var(--dark--border--color);
+  }
+
+.destructive {
+    background-color: var(--destractive--color);
+    color: var(--tertiary--text);
+}
+
+.small {
+    height: 2rem;
+    padding: 0.375rem 1rem;
+}
+
+.fullWidth {
+    width: 100%;
+}

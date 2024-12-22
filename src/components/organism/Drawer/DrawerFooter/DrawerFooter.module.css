@@ -1,0 +1,23 @@
+.buttonContainer {
+    display: none;
+}
+
+.button {
+    display: none;
+}
+
+@media screen and (max-width: 765px) {
+    .buttonContainer {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        padding: 0 1rem 1rem 1rem;
+        display: flex;
+        justify-content: stretch;
+    }
+
+    .button {
+        display: flex;
+        flex-grow: 1;
+    }
+}
