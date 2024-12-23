@@ -1,4 +1,10 @@
 
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #000;
+}
 
 .header {
     display: flex;
@@ -25,10 +31,8 @@
     right: 1.5rem;
 }
 
-.description {
-    font-weight: 400;
+.body {
     padding: 0.5rem 1.5rem;
-    white-space: 'nowrap',
 }
 
 .footer {
@@ -55,6 +59,10 @@
     }
 
    .description {
+        padding: 1rem;
+    }
+
+    .body {
         padding: 1rem;
     }
 

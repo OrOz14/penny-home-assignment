@@ -31,7 +31,7 @@ export const Drawer: FC<DrawerProps> = ({ title, children, footer, ref }) => {
           <DrawerTitle className={styles.title}>{title}</DrawerTitle>
           <IconButton
             icon={<Close />}
-            skin="light"
+            variant="light"
             onClick={() => setOpen(false)}
           />
         </DrawerHeader>

@@ -1,14 +1,16 @@
 import { ReactNode } from 'react';
-import type { ButtonSkin, ButtonSize, MainButtonProps } from '../MainButton';
+import type { ButtonVariant, ButtonSize, MainButtonProps } from '../MainButton';
 
-export interface ButtonProps extends MainButtonProps {
+export interface ButtonProps extends Omit<MainButtonProps, 'children'> {
   label: string;
   onClick?: () => void;
-  skin?: ButtonSkin;
+  variant?: ButtonVariant;
   size?: ButtonSize;
   prefix?: ReactNode;
   sufix?: ReactNode;
   fullWidth?: boolean;
-  customStyle?: string;
+  disabled?: boolean;
+  ariaLabel?: string;
+  className?: string;
   ref?: React.Ref<HTMLButtonElement>;
 }

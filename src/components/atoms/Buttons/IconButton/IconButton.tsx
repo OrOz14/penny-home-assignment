@@ -5,7 +5,7 @@ import styles from './IconButton.module.css';
 
 export const IconButton: FC<IconButtonProps> = ({ icon, ...props }) => {
   return (
-    <MainButton customStyle={styles.button} {...props}>
+    <MainButton className={styles.button} {...props}>
       {icon}
     </MainButton>
   );

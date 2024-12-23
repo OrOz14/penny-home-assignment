@@ -20,8 +20,10 @@
     outline: 0;
     line-height: 1.25rem;
     isolation: isolate;
-    transition-property: all;
-    transition-duration: 0.3s;
+}
+
+.main:hover {
+    opacity: .8;
 }
 
 .light {
@@ -42,4 +44,15 @@
 
 .fullWidth {
     width: 100%;
+}
+
+.main:disabled {
+    cursor: auto;
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.main:disabled:hover {
+    opacity: 1;
 }

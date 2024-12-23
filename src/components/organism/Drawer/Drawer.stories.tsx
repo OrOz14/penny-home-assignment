@@ -1,8 +1,7 @@
 import React from 'react';
 import { Drawer } from './Drawer';
-import { Card } from '../../molecules/Card';
-import { Button } from '../../../components/atoms/Buttons';
 import { DrawerFooter } from './DrawerFooter/DrawerFooter';
+import { DrawerBody } from './DrawerBody/DrawerBody';
 
 export default {
   title: 'Drawer/Drawer',
@@ -21,32 +20,17 @@ export default {
   },
 };
 
-const children = (
-  <div>
-    <Card
-      title="Autopay"
-      description="After receiving your first eBill, you can set up AutoPay to have future eBills paid automatically and on time."
-      learnMoreLink="#"
-    />
-    <Card
-      title="Request delivery details"
-      description="We'll email your vendor to set their delivery method."
-      action={<Button label="Send request" size="small" onClick={() => {}} />}
-    />
-  </div>
-);
-
 export const drawer = {
   args: {
     title: 'Vendor details',
-    children,
+    children: <DrawerBody />,
   },
 };
 
-export const drawer_with_footer = {
+export const drawer_with_mobile_footer = {
   args: {
     title: 'Vendor details',
-    children,
+    children: <DrawerBody />,
     footer: <DrawerFooter />,
   },
 };

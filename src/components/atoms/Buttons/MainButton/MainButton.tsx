@@ -4,18 +4,22 @@ import { MainButtonProps } from './MainButton.types';
 
 export const MainButton: FC<MainButtonProps> = ({
   onClick,
-  skin = 'standard',
+  variant = 'standard',
   size = 'medium',
   fullWidth,
-  customStyle,
+  disabled = false,
+  ariaLabel,
+  className,
   ref,
   ...props
 }) => {
   return (
     <button
-      className={`${styles.main} ${styles[skin]} ${styles[size]} ${fullWidth && styles.fullWidth} ${customStyle}`}
+      className={`${styles.main} ${styles[variant]} ${styles[size]} ${fullWidth && styles.fullWidth} ${className}`}
       onClick={onClick}
       ref={ref}
+      disabled={disabled}
+      aria-label={ariaLabel}
     >
       {props.children}
     </button>

@@ -5,7 +5,7 @@ export interface TextButtoProps {
   href?: string;
   onClick?: () => void;
   decoration?: TextDecoration;
-  customStyle?: CSSProperties;
+  className?: CSSProperties;
   ref?: React.Ref<HTMLAnchorElement>;
 }
 

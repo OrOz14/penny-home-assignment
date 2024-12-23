@@ -1,11 +1,4 @@
-import React, {
-  FC,
-  useState,
-  useRef,
-  useImperativeHandle,
-  Ref,
-  RefObject,
-} from 'react';
+import React, { FC, useState, useRef, useImperativeHandle } from 'react';
 import {
   DialogBody,
   DialogContent,
@@ -25,21 +18,26 @@ export const Modal: FC<ModalProps> = ({
   description,
   icon,
   confirmButtonLabel,
-  confirmButtonSkin,
+  confirmButtonVariant,
   confirmButtonOnClick,
   cancelButtonLabel,
-  cancelButtonSkin,
+  cancelButtonVariant,
   ref,
 }) => {
   const [open, setOpen] = useState(false);
-  const confirmButtonRef = useRef(null) as RefObject<HTMLButtonElement>;
-  const cancelButtonRef = useRef(null) as RefObject<HTMLButtonElement>;
+  const confirmButtonRef = useRef<HTMLButtonElement>(null);
+  const cancelButtonRef = useRef<HTMLButtonElement>(null);
 
-  // useImperativeHandle(ref, () => {
-  //   return {
-  //     focusConfirmButton: confirmButtonRef.current?.focus(),
-  //   };
-  // }, []);
+  useImperativeHandle(ref, () => {
+    return {
+      confirmButtonFocus() {
+        confirmButtonRef.current?.focus();
+      },
+      cancelButtonFocus() {
+        cancelButtonRef.current?.focus();
+      },
+    };
+  }, []);
 
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
   const modalPlacement = isMobile ? 'bottom' : 'top';
@@ -53,7 +51,7 @@ export const Modal: FC<ModalProps> = ({
       <DialogTrigger asChild>
         <Button label="Open Modal" />
       </DialogTrigger>
-      <DialogContent className={styles.content} ref={ref}>
+      <DialogContent className={styles.content}>
         <DialogHeader className={styles.header}>
           <div className={styles.title}>
             {icon}
@@ -61,16 +59,18 @@ export const Modal: FC<ModalProps> = ({
           </div>
           <IconButton
             icon={<Close />}
-            skin="light"
+            variant="light"
             onClick={() => setOpen(false)}
           />
         </DialogHeader>
-        <DialogBody className={styles.description}>{description}</DialogBody>
+        <DialogBody className={styles.body}>
+          <p2>{description}</p2>
+        </DialogBody>
         <DialogFooter className={styles.footer}>
           <div className={styles.footerButton}>
             <Button
               label={cancelButtonLabel}
-              skin={cancelButtonSkin}
+              variant={cancelButtonVariant}
               fullWidth={isMobile}
               onClick={() => setOpen(false)}
               customStyle={styles.button}
@@ -80,7 +80,7 @@ export const Modal: FC<ModalProps> = ({
           <div className={styles.footerButton}>
             <Button
               label={confirmButtonLabel}
-              skin={confirmButtonSkin}
+              variant={confirmButtonVariant}
               fullWidth={isMobile}
               onClick={confirmButtonOnClick}
               customStyle={styles.button}

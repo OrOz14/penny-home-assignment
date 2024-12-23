@@ -35,13 +35,6 @@
     color: var(--primary--text);
 }
 
-.description {
-    color: var(--secondary--text);
-    font-size: 0.875rem;
-    font-weight: 400;
-    margin: 0;
-}
-
 .link {
     color: var(--primary--color);
     text-decoration: none;

@@ -7,13 +7,13 @@ export const TextButton: FC<TextButtoProps> = ({
   href,
   onClick,
   decoration = 'none',
-  customStyle,
+  className,
   ref,
   ...props
 }) => {
   return (
     <a
-      className={`${styles.textButton} ${styles[decoration]} ${customStyle}`}
+      className={`${styles.textButton} ${styles[decoration]} ${className}`}
       href={href}
       onClick={onClick}
       ref={ref}

@@ -4,3 +4,4 @@ export { ToDo } from './ToDo';
 export { Close } from './Close';
 export { BankTransfer } from './BankTransfer';
 export { Alert } from './Alert';
+export { More } from './More';

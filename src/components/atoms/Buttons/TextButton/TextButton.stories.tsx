@@ -14,10 +14,3 @@ export const standard = {
     text: 'Learn more',
   },
 };
-
-export const standard_with_underline = {
-  args: {
-    text: 'Text Button',
-    decoration: 'underline',
-  },
-};

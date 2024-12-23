@@ -14,3 +14,34 @@
     --secondary--text: #646F87;
     --tertiary--text: #fff;
 }
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+p2 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #000;
+}
+
+p3 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: var(--secondary--text);
+}
+
+p4 {
+    font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1rem;
+        color: var(--secondary--text);
+}

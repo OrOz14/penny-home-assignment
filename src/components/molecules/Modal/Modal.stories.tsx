@@ -19,27 +19,27 @@ export default {
 
 export const modal: Record<string, ModalProps> = {
   args: {
-    title: 'Modal Header',
+    title: 'Modal header',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing Nullam a arcu est. Nulla facilisi. Donec nec sem aliquet, laoreet nisi et, bibendum tellus. Aenean sed nibh lorem.',
     confirmButtonLabel: 'Delete',
-    confirmButtonSkin: 'destructive',
+    confirmButtonVariant: 'destructive',
     confirmButtonOnClick: () => {},
     cancelButtonLabel: 'Cancel',
-    cancelButtonSkin: 'light',
+    cancelButtonVariant: 'light',
   },
 };
 
-export const modal_with_icon = {
+export const modal_with_icon: Record<string, ModalProps> = {
   args: {
-    title: 'Modal Header',
+    title: 'Modal header',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing Nullam a arcu est. Nulla facilisi. Donec nec sem aliquet, laoreet nisi et, bibendum tellus. Aenean sed nibh lorem.',
     icon: <Alert />,
     confirmButtonLabel: 'Delete',
-    confirmButtonSkin: 'destructive',
+    confirmButtonVariant: 'destructive',
     confirmButtonOnClick: () => {},
     cancelButtonLabel: 'Cancel',
-    cancelButtonSkin: 'light',
+    cancelButtonVariant: 'light',
   },
 };

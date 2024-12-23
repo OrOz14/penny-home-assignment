@@ -5,4 +5,5 @@ export interface CardProps {
   icon?: React.ReactNode;
   action?: React.ReactNode;
   note?: string;
+  className?: string;
 }

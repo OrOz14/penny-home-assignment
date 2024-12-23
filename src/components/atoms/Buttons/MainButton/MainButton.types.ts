@@ -3,12 +3,14 @@ import { ReactNode } from 'react';
 export interface MainButtonProps {
   children?: ReactNode;
   onClick?: () => void;
-  skin?: ButtonSkin;
+  variant?: ButtonVariant;
   size?: ButtonSize;
   fullWidth?: boolean;
-  customStyle?: string;
+  disabled?: boolean;
+  ariaLabel?: string;
+  className?: string;
   ref?: React.Ref<HTMLButtonElement>;
 }
 
-export type ButtonSkin = 'standard' | 'light' | 'destructive';
+export type ButtonVariant = 'standard' | 'light' | 'destructive';
 export type ButtonSize = 'small' | 'medium';

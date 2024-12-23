@@ -1,13 +1,18 @@
-import { ButtonSkin } from '../../../components/atoms/Buttons/MainButton';
+import { ButtonVariant } from '../../../components/atoms/Buttons/MainButton';
+
+type CustomHandle = {
+  confirmButtonFocus(): void,
+  cancelButtonFocus(): void,
+};
 
 export interface ModalProps {
   title: string;
   description: string;
-  confirmButtonSkin: ButtonSkin;
+  confirmButtonVariant: ButtonVariant;
   confirmButtonLabel: string;
   confirmButtonOnClick: () => void;
-  cancelButtonSkin: ButtonSkin;
+  cancelButtonVariant: ButtonVariant;
   cancelButtonLabel: string;
   icon?: React.ReactNode;
-  ref?: React.Ref<HTMLDivElement>;
+  ref?: React.Ref<CustomHandle>;
 }

@@ -1,13 +1,15 @@
 import { ReactNode } from 'react';
 import type {
-  ButtonSkin,
+  ButtonVariant,
   MainButtonProps,
 } from '../MainButton/MainButton.types';
 
 export interface IconButtonProps extends Omit<MainButtonProps, 'children'> {
   icon: ReactNode;
   onClick?: () => void;
-  skin?: ButtonSkin;
+  variant?: ButtonVariant;
+  disabled?: boolean;
+  ariaLabel?: string;
   customStyle?: string;
   ref?: React.Ref<HTMLButtonElement>;
 }

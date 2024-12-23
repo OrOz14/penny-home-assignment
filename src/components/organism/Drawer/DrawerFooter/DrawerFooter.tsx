@@ -7,7 +7,7 @@ export const DrawerFooter = () => {
   return (
     <div className={styles.buttonContainer}>
       <div className={styles.button}>
-        <Button label={'More'} sufix={<Add />} skin={'light'} fullWidth />
+        <Button label={'More'} sufix={<Add />} variant={'light'} fullWidth />
       </div>
       <div className={styles.button}>
         <Button label={'New Payment'} fullWidth />
