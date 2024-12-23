@@ -3,7 +3,10 @@ import { MainButton } from '../MainButton/MainButton';
 import { IconButtonProps } from './IconButton.types';
 import styles from './IconButton.module.css';
 
-export const IconButton: FC<IconButtonProps> = ({ icon, ...props }) => {
+export const IconButton: FC<IconButtonProps> = ({
+  icon,
+  ...props
+}: IconButtonProps) => {
   return (
     <MainButton className={styles.button} {...props}>
       {icon}

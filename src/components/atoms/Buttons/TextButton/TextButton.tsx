@@ -10,7 +10,7 @@ export const TextButton: FC<TextButtoProps> = ({
   className,
   ref,
   ...props
-}) => {
+}: TextButtoProps) => {
   return (
     <a
       className={`${styles.textButton} ${styles[decoration]} ${className}`}

@@ -17,7 +17,12 @@ import type { DrawerProps } from './Drawer.types';
 import styles from './Drawer.module.css';
 import { Divider } from '../../../components/atoms/Divider';
 
-export const Drawer: FC<DrawerProps> = ({ title, children, footer, ref }) => {
+export const Drawer: FC<DrawerProps> = ({
+  title,
+  children,
+  footer,
+  ref,
+}: DrawerProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -38,7 +43,7 @@ export const Drawer: FC<DrawerProps> = ({ title, children, footer, ref }) => {
         <DrawerBody className={styles.body}>{children}</DrawerBody>
         {footer ? (
           <>
-            <Divider customStyle={styles.divider} />
+            <Divider className={styles.divider} />
             {footer}
           </>
         ) : null}

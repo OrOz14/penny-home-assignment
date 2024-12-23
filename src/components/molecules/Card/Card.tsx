@@ -12,7 +12,7 @@ export const Card: FC<CardProps> = ({
   action,
   note,
   className,
-}) => {
+}: CardProps) => {
   return (
     <div className={`${styles.card} ${className}`}>
       <div className={styles.content}>

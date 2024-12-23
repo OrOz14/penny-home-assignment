@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styles from './MainButton.module.css';
-import { MainButtonProps } from './MainButton.types';
+import { MainButtonProps, ButtonVariant, ButtonSize } from './MainButton.types';
 
 export const MainButton: FC<MainButtonProps> = ({
   onClick,
@@ -12,7 +12,7 @@ export const MainButton: FC<MainButtonProps> = ({
   className,
   ref,
   ...props
-}) => {
+}: MainButtonProps) => {
   return (
     <button
       className={`${styles.main} ${styles[variant]} ${styles[size]} ${fullWidth && styles.fullWidth} ${className}`}

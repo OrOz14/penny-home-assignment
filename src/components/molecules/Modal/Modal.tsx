@@ -23,7 +23,7 @@ export const Modal: FC<ModalProps> = ({
   cancelButtonLabel,
   cancelButtonVariant,
   ref,
-}) => {
+}: ModalProps) => {
   const [open, setOpen] = useState(false);
   const confirmButtonRef = useRef<HTMLButtonElement>(null);
   const cancelButtonRef = useRef<HTMLButtonElement>(null);
