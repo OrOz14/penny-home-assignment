@@ -73,7 +73,7 @@ export const Modal: FC<ModalProps> = ({
               variant={cancelButtonVariant}
               fullWidth={isMobile}
               onClick={() => setOpen(false)}
-              customStyle={styles.button}
+              className={styles.button}
               ref={cancelButtonRef}
             />
           </div>
@@ -83,7 +83,7 @@ export const Modal: FC<ModalProps> = ({
               variant={confirmButtonVariant}
               fullWidth={isMobile}
               onClick={confirmButtonOnClick}
-              customStyle={styles.button}
+              className={styles.button}
               ref={confirmButtonRef}
             />
           </div>
